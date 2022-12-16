@@ -49,4 +49,50 @@ function buildTriangle(rows) {
 } 
 
 // test your code by uncommenting the following line
-console.log(buildTriangle(10));
+//console.log(buildTriangle(10));
+
+// function expression catSays
+var catSays = function(max) {
+  var catMessage = "";
+  for (var i = 0; i < max; i++) {
+    catMessage += "meow ";
+  }
+  return catMessage;
+};
+
+var catHisses = function(max) {
+  var catMessage = "";
+  for (var i = 0; i < max; i++) {
+    catMessage += "xxxx ";
+  }
+  return catMessage;
+};
+
+
+
+// function declaration helloCat accepting a callback
+function helloCat(callbackFunc) {
+  return "Hello " + callbackFunc(10);
+}
+
+// pass in catSays as a callback function
+// console.log(helloCat(catHisses));
+
+
+var cry = function sad() {
+  return "boohoo";
+};
+
+console.log(cry(3));
+
+
+var laugh = function (numero) {
+  var smile = "";
+  for (var i = 0; i < numero; i++) {
+      smile += "ha";
+  }
+  smile += "!";
+  return smile;
+}
+
+console.log(laugh(10));
